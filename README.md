@@ -6,9 +6,9 @@ Most of the example code here should run "out of the box", i.e. without further 
 # Summary of files
 
 ### Test examples
-Location: intro/test/
+Location: 0_test/
 A few simple files for testing that python, jupyter and numpy work.
 
 ### Examples from week 1
-Location: intro/
+Location: 1_intro/
 Code from the first week of lecture. (to be updated)
