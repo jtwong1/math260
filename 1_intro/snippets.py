@@ -25,10 +25,11 @@ def mut_examples():
     print('Example 3:')
     print(b)
 
-    row = [1, 2]
-    b = [[0, 0], [0, 0]]
-    b[0][:] = row
-    b[1][:] = row
-    b[0][0] = 7
+    row = [1,2]
+    b = [[0,0],[0,0]]
+    for k in range(2):
+        b[0][k] = row[k]
+        b[1][k] = row[k]
+        b[0][0] = 7
     print('Example 4:')
     print(b)
