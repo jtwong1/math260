@@ -16,4 +16,9 @@ A few simple files for testing that python, jupyter and numpy work.
 ### Examples from week 1
 Location: 1_intro/
 
-Code from the first week of lecture. (to be updated)
+Code from the first week of lecture. 
+
+### Examples from week 2
+Location: 2_intro/
+
+Code from the second week of lecture: file input/output example. 
