@@ -21,4 +21,4 @@ Code from the first week of lecture.
 ### Examples from week 2
 Location: 2_intro/
 
-Code from the second week of lecture: file input/output example. 
+Code from the second week of lecture: file input/output example and timing exercise.
