@@ -5,8 +5,10 @@ Most of the example code here should run "out of the box", i.e. without further 
 
 ## Summary of files
 
-### HW templates
+### HW files
 Homework 0 code (hw0/)
+Homework 1 code (hw/1) **and solutions**
+
 
 ### Test examples
 Location: 0_test/
