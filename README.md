@@ -24,3 +24,8 @@ Code from the first week of lecture.
 Location: 2_intro/
 
 Code from the second week of lecture: file input/output example and timing exercise.
+
+### Examples from week 3
+Location: 3_numerics/
+
+Code from week 3: derivatives, try/except and default arguments.
