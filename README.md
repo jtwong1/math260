@@ -7,7 +7,8 @@ Most of the example code here should run "out of the box", i.e. without further 
 
 ### HW files
 Homework 0 code (hw0/)
-Homework 1 code (hw/1) **and solutions**
+Homework 1 code (hw1/) **and solutions**
+Homework 3 code (hw3/) (template for the HW)
 
 
 ### Test examples
@@ -28,4 +29,4 @@ Code from the second week of lecture: file input/output example and timing exerc
 ### Examples from week 3
 Location: 3_numerics/
 
-Code from week 3: derivatives, try/except and default arguments.
+Code from week 3: derivatives, try/except and default arguments, and forward substitution.
