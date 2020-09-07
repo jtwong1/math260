@@ -7,7 +7,8 @@ Most of the example code here should run "out of the box", i.e. without further 
 
 ### HW files
 Homework 0 code (hw0/)
-Homework 1 code (hw1/) **and solutions**
+Homework 1 code and solutions (hw1/)
+Homework 2 solutions (hw2/)
 Homework 3 code (hw3/) (template for the HW)
 
 
