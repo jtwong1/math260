@@ -12,6 +12,10 @@ Homework 2 solutions (hw2/)
 Homework 3 code (hw3/) (template for the HW)
 
 
+### general resources
+Location: general/
+Numpy intro (jupyter notebook)
+
 ### Test examples
 Location: 0_test/
 
@@ -31,3 +35,8 @@ Code from the second week of lecture: file input/output example and timing exerc
 Location: 3_numerics/
 
 Code from week 3: derivatives, try/except and default arguments, and forward substitution.
+
+### Examples from week 3
+Location: 4_classes/
+
+Code from week 4: example classes from lecture (arrays, ...)
