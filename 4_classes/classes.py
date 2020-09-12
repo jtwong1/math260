@@ -1,6 +1,12 @@
 """ Examples from class: classes! """
 
 
+class Integer:
+
+    def __init__(self, x):
+        self.val = x
+
+
 class Pet:
     full = -2
 

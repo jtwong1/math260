@@ -9,7 +9,8 @@ Most of the example code here should run "out of the box", i.e. without further 
 Homework 0 code (hw0/)
 Homework 1 code and solutions (hw1/)
 Homework 2 solutions (hw2/)
-Homework 3 code (hw3/) (template for the HW)
+Homework 3 code and solutions (hw3/)
+Homework 4 code (template)
 
 
 ### general resources
