@@ -37,7 +37,7 @@ Location: 3_numerics/
 
 Code from week 3: derivatives, try/except and default arguments, and forward substitution.
 
-### Examples from week 3
-Location: 4_classes/
+### Examples from week 4 and 5
+Location: 4\_classes/ and 5\_structures/
 
-Code from week 4: example classes from lecture (arrays, ...)
+Code from week 4 and: example classes from lecture (arrays, ...) and trees
