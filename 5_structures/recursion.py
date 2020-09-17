@@ -5,7 +5,7 @@ def fact(n):
     """ factorial, printing to see execution order """
     print(f"fact({n}) call")
     if n == 0:  # base
-        # raise(Exception())  # (to show the stack at the base case)
+        raise(Exception())  # (to show the stack at the base case)
         return 1
     elif n < 0:
         raise(ValueError("Invalid: negative n!"))
