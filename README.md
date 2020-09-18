@@ -40,4 +40,4 @@ Code from week 3: derivatives, try/except and default arguments, and forward sub
 ### Examples from week 4 and 5
 Location: 4\_classes/ and 5\_structures/
 
-Code from week 4 and: example classes from lecture (arrays, ...) and trees
+Code from week 4 and: example classes from lecture (arrays, ...), recursion and trees
