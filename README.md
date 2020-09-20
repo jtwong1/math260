@@ -10,7 +10,7 @@ Homework 0 code (hw0/)
 Homework 1 code and solutions (hw1/)
 Homework 2 solutions (hw2/)
 Homework 3 code and solutions (hw3/)
-Homework 4 code (template)
+Homework 4 code and solutions
 Homework 5 code (template)
 
 
@@ -42,3 +42,6 @@ Code from week 3: derivatives, try/except and default arguments, and forward sub
 Location: 4\_classes/ and 5\_structures/
 
 Code from week 4 and: example classes from lecture (arrays, ...), recursion and trees
+
+### Examples from week 6
+(to be added soon)
