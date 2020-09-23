@@ -11,7 +11,7 @@ import random
 def mergesort(arr):
     """ ... put a doc-string here ..."""
     work = [0]*len(arr)
-    msort(0, len(arr), arr, work)
+    msort(0, len(arr)-1, arr, work)
 
 
 def msort(j, k, arr, work):
