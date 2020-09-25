@@ -11,7 +11,7 @@ Homework 1 code and solutions (hw1/)
 Homework 2 solutions (hw2/)
 Homework 3 code and solutions (hw3/)
 Homework 4 code and solutions
-Homework 5 code (template)
+Homework 5 code and solutions
 
 
 ### general resources
@@ -44,4 +44,5 @@ Location: 4\_classes/ and 5\_structures/
 Code from week 4 and: example classes from lecture (arrays, ...), recursion and trees
 
 ### Examples from week 6
-(to be added soon)
+Location: 5\_structures/ and 6\_integ/
+Examples from week 6: integration, dictionaries and convergence jupyter notebook.
