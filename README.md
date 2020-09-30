@@ -12,6 +12,7 @@ Homework 2 solutions (hw2/)
 Homework 3 code and solutions (hw3/)
 Homework 4 code and solutions
 Homework 5 code and solutions
+Midterm solutions
 
 
 ### general resources
@@ -46,3 +47,7 @@ Code from week 4 and: example classes from lecture (arrays, ...), recursion and 
 ### Examples from week 6
 Location: 5\_structures/ and 6\_integ/
 Examples from week 6: integration, dictionaries and convergence jupyter notebook.
+
+### Examples from week 7:
+Location: 6\_integ/ and 4\_classes/
+subclasses, adaptive integration.
