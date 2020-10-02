@@ -39,6 +39,7 @@ def simple_test():
 if __name__ == '__main__':
     n = [2**k for k in range(3, 12)]
     exact = np.e - 1
+    func = lambda x: np.exp(x)
     approx = [trapz(func, 0, 1, v) for v in n]
     err = [a - exact for a in approx]
 
@@ -47,8 +48,11 @@ if __name__ == '__main__':
             r = (approx[k+2] - approx[k+1]) / (approx[k+1] - approx[k])
         print("{} & {:.4f} & {:.4f}".format(n[k], approx[k], -np.log2(r)))
 
-    plt.figure(figsize=(3, 2.5))
+    plt.figure(figsize=(6, 4))
+
+    vals = [100*v**(-2) for v in n]
     plt.loglog(n, err, '.-k', markersize=12)
+    plt.loglog(n, vals, '--r')
     plt.xlabel('$n$')
     plt.ylabel('err')
     plt.savefig('trapz.pdf', bbox_inches='tight')
