@@ -41,7 +41,7 @@ if __name__ == '__main__':
     exact = np.e - 1
     func = lambda x: np.exp(x)
     approx = [trapz(func, 0, 1, v) for v in n]
-    err = [a - exact for a in approx]
+    err = [np.abs(a - exact) for a in approx]
 
     for k in range(len(n)):
         if k < len(n)-2:
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     plt.figure(figsize=(6, 4))
 
-    vals = [100*v**(-2) for v in n]
+    vals = [100*v**(-2) for v in n]  # reference line
     plt.loglog(n, err, '.-k', markersize=12)
     plt.loglog(n, vals, '--r')
     plt.xlabel('$n$')
