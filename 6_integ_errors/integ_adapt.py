@@ -35,7 +35,7 @@ def integ(fun, a, b, tol=1e-8, depth=0, endpt=[]):
 
 
 def integ_stack(fun, a, b, tol=1e-8):
-    """ adaptive scheme [with a stack]. T
+    """ adaptive scheme [with a stack].
         Tracks sub-intervals used in subs for testing."""
     stack = [(a, b)]
     tol = tol/(b-a)  # fix tolerance (so err < tol*(b-a))
@@ -72,11 +72,13 @@ if __name__ == '__main__':
     err = abs(approx - exact)
 
     print(f"Adapt: err = {err:.2e}, {len(left)} intervals")
+
+    # plotting to show the mesh of points for the adaptive method.
     x = np.linspace(a, b, 100)
     left = np.array(left)  # convert to numpy arrray for vectorized math
 
     plt.figure(figsize=(3, 2.5))
-    plt.plot(left, f(left), '.b')  # plot the left sub-interval points
-    plt.plot(x, f(x), '--k')  # plot the function
+    plt.plot(left, f(left), '.b')  # plot left sub-interval points
+    plt.plot(x, f(x), '--k')
     plt.xlabel('$x$')
     plt.show()
