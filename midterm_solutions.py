@@ -1,8 +1,10 @@
-# TEST SOLUTIONS
+""" Midterm solutions. Note that there are many alternate ways to solve
+the problems; the following is just one example set of solutions. """
 import random
 
 
 def scurry(n, start, minutes, show=True):
+    """ simulates the rat moving through the line of rooms """
     pos = start
     if show:
         print("time \t room")
@@ -22,62 +24,47 @@ def scurry(n, start, minutes, show=True):
     return pos
 
 
-def distribution(n, minutes, start=0, trials=10000):
-    prob = [0]*n
+def distribution(n, minutes, start, trials=10000):
+    """ Calculates the distribution of rat locations after
+        a certain # of minsutes, given a starting point. """
+    prob_list = [0]*n
 
     for k in range(trials):
         pos = scurry(n, start, minutes, show=False)
-        prob[pos] += 1
+        prob_list[pos] += 1
 
     for k in range(n):
-        prob[k] /= trials
+        prob_list[k] /= trials
 
-    return prob
+    return prob_list
 
 
-def test_dist():
-    n = 8
-    minutes = 100
+def test_distribution():
+    """ Test code for the distribution function """
+    n = 9
+    minutes = 60
 
-    p1 = distribution(n, minutes, 0)
-    p2 = distribution(n, minutes, n-1)
+    p_left = distribution(n, minutes, 0)[0]
+    p_right = distribution(n, minutes, n-1)[0]
 
-    print(p1)
-    print(p2)
-    print([x - y for x, y in zip(p1, p2)])
+    print(f"prob. of being in room 0 after {minutes} min:")
+    print(f"start=0: p={p_left}")
+    print(f"start=n-1: p={p_right}")
 
 
 # ---------------------------------------------
 def toeplitz(seed):
+    """ toeplitz construction, with slices """
     if len(seed) % 2 == 0:
         raise ValueError('Wrong parity for seed length!')
     n = (len(seed)+1)//2
 
     mat = [[0 for k in range(n)] for j in range(n)]
 
-    for diag in range(0, n):
-        for k in range(0, n - diag):
-            print(k + diag, k)
-            mat[k + diag][k] = seed[n - 1 - diag]
-
-    for diag in range(1, n):
-        for j in range(0, n - diag):
-            print(j, j + diag)
-
-    mat[j][j+diag] = seed[n - 1 + diag]
-
-    mat2 = [None]*n
     for j in range(n):
-        mat2[j] = seed[n-1-j: 2*n-1-j]
+        mat[j] = seed[n-1-j: 2*n-1-j]
 
-    return mat, mat2
-
-
-def toep_test():
-    """ test for norm1: should output 10 """
-    mat = [[1, 2, 0], [4, 3, -1], [-5, 2, 1], [0, 1, 3]]
-    print(norm1(mat))
-
+    return mat
 
 
 # --------------------------------------------------------
@@ -97,55 +84,53 @@ class Chain:
         self.base = Node(data, None)
 
     def __repr__(self):
-        v = self.base
-        rep = ""
-        while v:
-            rep += str(v) + "-"
-            v = v.right
-        return rep
+        current = self.base  # reference to current node
+        result = ""
+        while current:
+            result += str(current) + "-"
+            current = current.right
+        return result
 
     def pop(self):
-        v = self.base
-        if not v:
+        popped = self.base  # node to pop
+        if not popped:
             raise ValueError("Size is zero!")
-        self.base = v.right
+        self.base = popped.right
 
-        return v.data
+        return popped.data
 
     def prepend(self, data):
-        v = Node(data, self.base)
-        self.base = v
+        base_new = Node(data, self.base)
+        self.base = base_new
 
     def insert(self, data, k):
 
         pos = 0
-        v = self.base
-        while pos < k and v:
+        current = self.base
+        while pos < k and current:
             pos += 1
-            v = v.right
+            current = current.right
 
-        if not v:
+        if not current:
             raise IndexError(f"index {k} too large!")
 
-        v.right = Node(data, v.right)
+        current.right = Node(data, current.right)
 
     def attach(self, more):
-        v = self.base
-        while v.right:
-            v = v.right
+        current = self.base
+        while current.right:
+            current = current.right
 
-        v.right = more.base
+        current.right = more.base
 
 
 def squares(n):
-    v = Node(n**2, None)
+    square_chain = Chain(n**2)
 
-    for k in range(n-1, 1, -1):
-        v = Node(k**2, v)
+    for k in range(n-1, 0, -1):
+        square_chain.prepend(k**2)
 
-    c = Chain(1)
-    c.base.right = v
-    return c
+    return square_chain
 
 
 def chain_test():
