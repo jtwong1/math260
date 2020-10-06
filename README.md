@@ -48,6 +48,7 @@ Code from week 4 and: example classes from lecture (arrays, ...), recursion and 
 Location: 5\_structures/ and 6\_integ/
 Examples from week 6: integration, dictionaries and convergence jupyter notebook.
 
-### Examples from week 7:
-Location: 6\_integ/ and 4\_classes/
-subclasses, adaptive integration.
+### Examples from week 7 and 8:
+Location: Week 6, 7 folder and Week 4 (for subclasses)
+adaptive integration, calculating convergence, markov chains and the power method,
+decorator example (in week 7)
