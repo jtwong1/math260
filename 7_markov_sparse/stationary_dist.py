@@ -1,6 +1,8 @@
 # Lecture code: bee example.
 # The power method for computing a stationary distribution,
 # plus code for choosing a move from a state to the next.
+#
+# Also: pagerank example from class (with four nodes)
 
 import numpy as np
 from numpy.random import uniform, rand   # for a random number
@@ -62,15 +64,43 @@ def calculate_bees():
     """ stationary distribution for the bee example, closed window,
         computed two ways (simulation and via eigenvalues [the right way])
     """
-    pt = np.array([[0.5, 0.5, 0.7],
-                  [0.5, 0.0, 0.3],
-                  [0.0, 0.5, 0]])
-    dist = stationary(pt, 20)
+    # transpose of transition matrix
+    p_transpose = np.array([[0.5, 0.5, 0.7],
+                            [0.5, 0.0, 0.3],
+                            [0.0, 0.5, 0]])
+    dist = stationary(p_transpose, 20)
     print("Stationary distribution:")
     print(dist)
 
     # for direct simulation
-    steps = 1000
-    dist_sim = bee_simulation(2000, steps)
+    steps = 800
+    dist_sim = bee_simulation(1000, steps)
     print(f"From simulation ({steps} steps):")
     print(dist_sim)
+
+
+# --------------------------------------------------------
+# Pagerank example from lecture
+
+def pagerank_small():
+    """ small pagerank example from lecture (four nodes) """
+    n = 4
+    p_matrix = np.array([[0, 1/2, 0, 1/2],
+                         [0, 0, 1, 0],
+                         [1/3, 1/3, 0, 1/3],
+                         [0, 0, 1, 0]])
+
+    # not efficient here; just to illustrate calculation
+    alpha = 0.9
+    pt_mod = np.zeros((n, n))
+    for j in range(n):
+        for k in range(n):
+            pt_mod[j, k] = alpha*p_matrix[k, j] + (1-alpha)*(1/n)
+
+    # NOTE: you can shorthand this with
+    # pt_mod = alpha*p_matrix.transpose() + (1-alpha)/n
+    # which uses numpy's rules for adding scalars to arrays
+    # For efficient code, you'd construct the transpose directly
+
+    dist = stationary(pt_mod, 100)
+    print(dist)
