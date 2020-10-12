@@ -54,7 +54,7 @@ def stationary(pt, steps):
        Given the largest eigenvalue is 1, finds the eigenvector.
     """
     x = rand(pt.shape[0])  # random initial vector
-    x /= sum(x)  # normalize (not necessary, in theory!)
+    x /= sum(x)
     for it in range(steps):
         x = np.dot(pt, x)
     return x

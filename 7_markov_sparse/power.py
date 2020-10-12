@@ -18,7 +18,7 @@ def power_method(a, steps):
     it = 0
     while it < steps:  # other stopping conditions would go here
         q = np.dot(a, x)  # compute a*x
-        r = x.dot(q)    # Rayleigh quotient x_k dot x_k / (x_(k-1) dot x_(k-1))
+        r = x.dot(q)    # Rayleigh quotient x_k dot Ax_k / x_k dot x_k
         x = q/np.sqrt(q.dot(q))  # normalize x to a unit vector
         it += 1
     return x, r

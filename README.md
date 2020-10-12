@@ -13,6 +13,7 @@ Homework 3 code and solutions (hw3/)
 Homework 4 code and solutions
 Homework 5 code and solutions
 Midterm solutions
+Homework 6 code and solutions
 
 
 ### general resources
