@@ -20,7 +20,7 @@ def timing(func):
 
 # -------------------------------------------------
 # decorator example without the decorator syntax
-def myfunc(x, b=3):
+def myfunc(x, b=1):
     return 2*b*x
 
 
@@ -36,7 +36,10 @@ def dec1():
 
 # -------------------------------------------------
 # actual decorator example
-@timing  # decorates foo with timer code
+
+# decorates foo with timer code
+
+@timing
 def foo(y, z, c=5):
     return y + z + c
 
@@ -46,3 +49,16 @@ def dec2():
     y = foo(2, 3, c=10)
     print(y)
     print("New function name: ", foo.__name__)
+
+
+# -----------------------
+# exxample of args / kwargs to collect all inputs
+def outer(*args, **kwargs):
+    """ what to do if you must "pass all arguments" to an inner function? """
+    print_args(*args, **kwargs)
+
+
+def print_args(*args, **kwargs):
+    """ a function that deals with arbitrary arguments """
+    print(args)
+    print(kwargs)
