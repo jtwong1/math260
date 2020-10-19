@@ -13,7 +13,9 @@ Homework 3 code and solutions (hw3/)
 Homework 4 code and solutions
 Homework 5 code and solutions
 Midterm solutions
-Homework 6 code and solutions
+Homework 6 solutions
+Homework 7 solutions
+Homework 8 code (text files)
 
 
 ### general resources
@@ -53,3 +55,7 @@ Examples from week 6: integration, dictionaries and convergence jupyter notebook
 Location: Week 6, 7 folder and Week 4 (for subclasses)
 adaptive integration, calculating convergence, markov chains and the power method,
 decorator example (in week 7)
+
+### Examples from week 9:
+Location: Week 9 folder
+ODE code: Euler's method for scalar equations and systems, resonance example
