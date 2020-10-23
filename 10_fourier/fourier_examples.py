@@ -42,7 +42,7 @@ def example(n, length=1):
 
     # take the FFT (including 1/n) and get frequencies (cycles/unit of time)
     # now freqs line up with F correctly...
-    freq = fft.fftfreq(n, d)  # freq = [0, 1, ... n/2, -n/2+1, ..., -1]/length
+    freq = fft.fftfreq(n, d)  # freq = [0, 1, ... n/2-1, -n/2, ..., -1]/length
     sf = fft.fft(s)/n
 
     # plot the DFT, real/imag parts
@@ -50,7 +50,7 @@ def example(n, length=1):
     dualplot(freq, sf, "DFT (real/imag parts)")
     plt.show()
 
-    # shifted freqs/transform: freq_centered = [-n/2+1, ... -1,0,1, ... , n/2]
+    # shifted freqs/transform: freq_centered = [-n/2, ... -1,0,1, ... , n/2-1]
     freq_centered = fft.fftshift(freq)  # freqs are increasing; freq[n//2] = 0
     sf_centered = fft.fftshift(sf)
 
@@ -58,8 +58,8 @@ def example(n, length=1):
 def freq_plot(n):
     """ Example: plotting the frequencies and shifted versions vs. index """
     d = 1/n  # sample spacing (assuming n samples in [0, 1])
-    freq = fft.fftfreq(n, d)  # frequencies [0, 1, ... n/2, -n/2+1, ..., -1]
-    freq_centered = fft.fftshift(freq)  # shifted: [-n/2+1,...-1,0,1, ..., n/2]
+    freq = fft.fftfreq(n, d)  # frequencies [0, 1, ... n/2-1, -n/2, ..., -1]
+    freq_centered = fft.fftshift(freq)  # shifted: [-n/2,...-1,0,1, ..., n/2-1]
     ind = range(len(freq_centered))
 
     plt.figure(figsize=(4, 3))

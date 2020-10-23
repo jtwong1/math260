@@ -94,5 +94,5 @@ def endpoint_err_ex():
     for k in range(m):
         p = -np.log2(ratios[k])
         print(f"{hvals[k]:.2e} \t {endval[k]:.4f}", end="")
-        if k>=2:
+        if k >= 2:
             print(f"\t {ratios[k]:.2f} \t {p:.2f}")

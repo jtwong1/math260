@@ -18,13 +18,13 @@ def low_pass(rate, data, length, cutoff):
             filtered - the filtered data
     """
     n = data.shape[0]
-    freq = fftfreq(n, 1/rate)  # freqs in Hz, (0 ... n/2, -n/2+1, .. -1)/L
+    freq = fftfreq(n, 1/rate)  # freqs in Hz, (0 ... n/2-1, -n/2, .. -1)/L
     df = fft(data)/n
 
     # find index for cutoff freq.
     # then cut off frequences k+1 to n/2 and -n/2 to -(k+1)
     k = np.searchsorted(freq[0:n//2], cutoff)
-    df[k+1:n//2+1] = 0
+    df[k+1:n//2] = 0
     df[n//2:-k] = 0
 
     filtered = n*ifft(df)
