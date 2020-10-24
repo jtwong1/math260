@@ -16,6 +16,7 @@ Midterm solutions
 Homework 6 solutions
 Homework 7 solutions
 Homework 8 code (text files)
+Homework 9 code (plus audio files)
 
 
 ### general resources
@@ -59,3 +60,7 @@ decorator example (in week 7)
 ### Examples from week 9:
 Location: Week 9 folder
 ODE code: Euler's method for scalar equations and systems, resonance example
+
+### Examples from week 10:
+Location: Week 10 folder
+Fourier transform examples (low pass filter; transform example)
