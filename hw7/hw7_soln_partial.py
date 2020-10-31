@@ -28,11 +28,12 @@ def power_method_test(a, true_v, tol=1e-8, max_steps=100):
             x, r - the eigenvector/value pair such that a*x = r*x
     """
     x = random.rand(a.shape[0])
+    x = np.ones(3)
     it = 0
     err = tol
     true_err = []
 
-    while err >= tol and it < max_steps:
+    while err >= 0*tol and it < max_steps:
         q = np.dot(a, x)
         r = x.dot(q)
         tmp = q/norm2(q)

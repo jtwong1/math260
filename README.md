@@ -17,6 +17,7 @@ Homework 6 solutions
 Homework 7 solutions
 Homework 8 code (text files)
 Homework 9 code (plus audio files)
+Homework 10 code (template plus data file)
 
 
 ### general resources
@@ -64,3 +65,7 @@ ODE code: Euler's method for scalar equations and systems, resonance example
 ### Examples from week 10:
 Location: Week 10 folder
 Fourier transform examples (low pass filter; transform example)
+
+### Examples from week 11:
+Location: Week 11 folder
+Gradient descent examples (Gompertz model fitting, simple minimization example)
