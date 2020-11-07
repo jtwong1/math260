@@ -69,3 +69,7 @@ Fourier transform examples (low pass filter; transform example)
 ### Examples from week 11:
 Location: Week 11 folder
 Gradient descent examples (Gompertz model fitting, simple minimization example)
+
+### Examples from week 12:
+Location: Week 12 folder
+Finite difference examples: method of lines, euler's method, boundary value problems (tridag. systems)
